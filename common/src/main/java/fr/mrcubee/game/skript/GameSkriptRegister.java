@@ -1,6 +1,6 @@
-package fr.mrcubee.skript;
+package fr.mrcubee.game.skript;
 
-import fr.mrcubee.skript.event.GameSkriptEventRegister;
+import fr.mrcubee.game.skript.event.GameSkriptEventRegister;
 
 public class GameSkriptRegister {
 

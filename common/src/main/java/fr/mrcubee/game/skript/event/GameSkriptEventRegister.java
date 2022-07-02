@@ -1,4 +1,4 @@
-package fr.mrcubee.skript.event;
+package fr.mrcubee.game.skript.event;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.registrations.EventValues;
