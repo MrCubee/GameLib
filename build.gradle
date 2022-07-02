@@ -12,10 +12,20 @@ subprojects {
         maven {
             url 'https://nexus.mrcubee.net/repository/minecraft/'
         }
+        maven {
+            url 'https://repo.skriptlang.org/releases'
+        }
     }
+
+    dependencies {
+        compileOnly 'com.github.SkriptLang:Skript:2.6.2'
+        compileOnly 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
+    }
+
     tasks.withType(JavaCompile).configureEach {
         options.compilerArgs += ["-source", "1.8", "-target", "1.8"]
     }
+
     compileJava.options.encoding = 'UTF-8'
     compileTestJava.options.encoding = 'UTF-8'
     processResources {

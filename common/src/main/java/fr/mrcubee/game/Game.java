@@ -3,6 +3,8 @@ package fr.mrcubee.game;
 import fr.mrcubee.game.event.EventUtils;
 import fr.mrcubee.game.event.GameStatsChangeEvent;
 import fr.mrcubee.game.event.GamePlayerJoinEvent;
+import fr.mrcubee.game.skript.GameSkriptRegister;
+import fr.mrcubee.game.skript.Skriptable;
 import fr.mrcubee.game.timer.Timer;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
@@ -17,7 +19,7 @@ import java.util.HashSet;
  * @param <P> Main plugin class.
  * @param <S> Plugin game's settings class.
  */
-public class Game<P extends GameJavaPlugin<P, S, ? extends Game<P, S>>, S extends GameSettings> {
+public class Game<P extends GameJavaPlugin<P, S, ? extends Game<P, S>>, S extends GameSettings> implements Skriptable {
 
     private final P plugin;
     private final S gameSetting;
@@ -111,6 +113,11 @@ public class Game<P extends GameJavaPlugin<P, S, ? extends Game<P, S>>, S extend
 
     public P getPlugin() {
         return this.plugin;
+    }
+
+    @Override
+    public void skriptSetup() {
+        GameSkriptRegister.register();
     }
 
 }

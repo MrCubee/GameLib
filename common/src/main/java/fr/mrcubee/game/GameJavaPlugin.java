@@ -2,6 +2,7 @@ package fr.mrcubee.game;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAddon;
+import fr.mrcubee.game.skript.Skriptable;
 import fr.mrcubee.langlib.Lang;
 import fr.mrcubee.game.skript.GameSkriptRegister;
 import org.bukkit.Bukkit;
@@ -23,10 +24,7 @@ public abstract class GameJavaPlugin<P extends GameJavaPlugin<P, S, G>, S extend
     private boolean checkAndLoadSkriptPlugin() {
         final Plugin plugin = Bukkit.getPluginManager().getPlugin("Skript");
 
-        if (plugin == null)
-            return false;
-        loadSkriptAddon(Skript.registerAddon(this));
-        return true;
+        return plugin != null;
     }
 
     protected void loadSkriptAddon(final SkriptAddon gameAddon) {
@@ -46,9 +44,11 @@ public abstract class GameJavaPlugin<P extends GameJavaPlugin<P, S, G>, S extend
 
     @Override
     public void onEnable() {
-        if (checkAndLoadSkriptPlugin())
+        if (checkAndLoadSkriptPlugin()) {
             getLogger().info("Load the internal Skript addon.");
-        else
+            if (this.game != null)
+                this.game.skriptSetup();
+        } else
             getLogger().warning("This plugin can be used with Skript plugin.");
     }
 
