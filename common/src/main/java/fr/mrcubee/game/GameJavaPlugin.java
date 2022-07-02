@@ -3,6 +3,7 @@ package fr.mrcubee.game;
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAddon;
 import fr.mrcubee.langlib.Lang;
+import fr.mrcubee.skript.GameSkriptRegister;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -28,7 +29,9 @@ public abstract class GameJavaPlugin<P extends GameJavaPlugin<P, S, G>, S extend
         return true;
     }
 
-    protected abstract void loadSkriptAddon(final SkriptAddon gameAddon);
+    protected void loadSkriptAddon(final SkriptAddon gameAddon) {
+        GameSkriptRegister.register();
+    }
 
     @Override
     public void onLoad() {
