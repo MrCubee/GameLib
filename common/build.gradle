@@ -8,6 +8,6 @@ jar {
 }
 
 dependencies {
-    implementation project(':gamelib-common')
+    implementation 'fr.mrcubee.minecraft.library:languagelib:1.0'
     compileOnly 'com.github.SkriptLang:Skript:2.6.2'
 }

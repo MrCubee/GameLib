@@ -1,6 +1,6 @@
 rootProject.name = 'gamelib'
 
-['common', 'kit'].each {
+['common', 'kit', 'universal'].each {
     include ":gamelib-${it}"
     project(":gamelib-${it}").projectDir = file(it)
 }

@@ -1,11 +1,12 @@
 allprojects {
     group 'fr.mrcubee.minecraft.library'
-    version '1.0-SNAPSHOT'
+    version '1.0'
     description 'Simple mini-game library.'
 }
 
 subprojects {
     apply plugin: 'java'
+    apply plugin: 'maven-publish'
 
     repositories {
         mavenCentral()
@@ -18,8 +19,6 @@ subprojects {
     }
 
     dependencies {
-        implementation 'fr.mrcubee.minecraft.library:languagelib:1.0'
-        compileOnly 'com.github.SkriptLang:Skript:2.6.2'
         compileOnly 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
     }
 
@@ -39,4 +38,22 @@ subprojects {
             )
         }
     }
+
+    publishing {
+        repositories {
+            maven {
+                url = 'https://nexus.mrcubee.net/repository/minecraft'
+                credentials {
+                    username = System.getenv("MAVEN_USERNAME")
+                    password = System.getenv("MAVEN_PASSWORD")
+                }
+            }
+        }
+        publications {
+            shadow(MavenPublication) {
+                from components.java
+            }
+        }
+    }
+
 }

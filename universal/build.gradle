@@ -8,6 +8,5 @@ jar {
 }
 
 dependencies {
-    implementation project(':gamelib-common')
-    compileOnly 'com.github.SkriptLang:Skript:2.6.2'
+    implementation project(':gamelib-kit')
 }
