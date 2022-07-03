@@ -12,6 +12,15 @@ subprojects {
         maven {
             url 'https://nexus.mrcubee.net/repository/minecraft/'
         }
+        maven {
+            url 'https://repo.skriptlang.org/releases'
+        }
+    }
+
+    dependencies {
+        implementation 'fr.mrcubee.minecraft.library:languagelib:1.0'
+        compileOnly 'com.github.SkriptLang:Skript:2.6.2'
+        compileOnly 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
     }
 
     tasks.withType(JavaCompile).configureEach {
