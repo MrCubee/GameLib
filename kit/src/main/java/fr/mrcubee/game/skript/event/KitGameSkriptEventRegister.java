@@ -7,6 +7,11 @@ import fr.mrcubee.game.event.*;
 import fr.mrcubee.game.kit.Kit;
 import org.bukkit.entity.Player;
 
+/**
+ * @author MrCubee
+ * @since 1.0
+ * @version 1.0
+ */
 public class KitGameSkriptEventRegister {
 
     public static void register() {

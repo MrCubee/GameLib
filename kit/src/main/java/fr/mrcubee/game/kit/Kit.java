@@ -16,13 +16,13 @@ public abstract class Kit implements Listener {
 
     protected final int hashCode;
     private final String name;
-    private final ItemStack kitMenuItemstack;
+    private final ItemStack kitMenuItemStack;
     private final Set<Player> players;
 
     protected Kit(final String name, final ItemStack kitMenuItemStack) {
         this.name = name;
         this.hashCode = (name != null) ? name.toLowerCase().hashCode() : 0;
-        this.kitMenuItemstack = kitMenuItemStack;
+        this.kitMenuItemStack = kitMenuItemStack;
         this.players = new HashSet<Player>();
     }
 
@@ -70,8 +70,8 @@ public abstract class Kit implements Listener {
         return this.name;
     }
 
-    public ItemStack getKitMenuItemstack() {
-        return this.kitMenuItemstack;
+    public ItemStack getKitMenuItemStack() {
+        return this.kitMenuItemStack;
     }
 
     public Set<Player> getPlayers() {

@@ -4,6 +4,11 @@ import ch.njol.skript.expressions.base.SimplePropertyExpression;
 import fr.mrcubee.game.kit.Kit;
 import org.bukkit.inventory.ItemStack;
 
+/**
+ * @author MrCubee
+ * @since 1.0
+ * @version 1.0
+ */
 public class SkKitGetMenuItemExpression extends SimplePropertyExpression<Kit, ItemStack> {
 
     @Override
@@ -13,7 +18,7 @@ public class SkKitGetMenuItemExpression extends SimplePropertyExpression<Kit, It
 
     @Override
     public ItemStack convert(Kit kit) {
-        return kit.getKitMenuItemstack();
+        return kit.getKitMenuItemStack();
     }
 
     @Override

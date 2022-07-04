@@ -11,6 +11,11 @@ import org.bukkit.event.Event;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * @author MrCubee
+ * @since 1.0
+ * @version 1.0
+ */
 public class SkKitGetPlayerExpression extends PropertyExpression<Kit, Player> {
 
     @Override

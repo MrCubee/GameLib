@@ -8,6 +8,11 @@ import fr.mrcubee.game.skript.event.KitGameSkriptEventRegister;
 import fr.mrcubee.game.skript.expression.KitGameSkriptExpressionRegister;
 import org.bukkit.inventory.ItemStack;
 
+/**
+ * @author MrCubee
+ * @since 1.0
+ * @version 1.0
+ */
 public class KitGameSkriptRegister {
 
     public static void register() {

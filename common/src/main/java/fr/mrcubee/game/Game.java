@@ -4,7 +4,6 @@ import fr.mrcubee.game.event.EventUtils;
 import fr.mrcubee.game.event.GamePlayerQuitEvent;
 import fr.mrcubee.game.event.GameStatsChangeEvent;
 import fr.mrcubee.game.event.GamePlayerJoinEvent;
-import fr.mrcubee.game.scoreboard.ScoreboardManager;
 import fr.mrcubee.game.skript.GameSkriptRegister;
 import fr.mrcubee.game.skript.Skriptable;
 import fr.mrcubee.game.step.StepManager;
@@ -88,7 +87,7 @@ public class Game<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G e
                 else
                     this.gameEndTime = System.currentTimeMillis() + (duringTime * 1000);
                 this.totalPlayers = this.players.size();
-                // this.getStepManager().nextStep();
+                this.getStepManager().nextStep();
                 break;
             case STOPPING:
                 this.nextStatTime = System.currentTimeMillis() + (this.gameSetting.getRestartTime() * 1000);
