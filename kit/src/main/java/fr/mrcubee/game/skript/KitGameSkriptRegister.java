@@ -15,7 +15,7 @@ public class KitGameSkriptRegister {
                 .user("kits?")
                 .name("Kit"));
         Converters.registerConverter(Kit.class, String.class, Kit::getName);
-        Converters.registerConverter(Kit.class, ItemStack.class, Kit::getKitMenuItemstack);
+        Converters.registerConverter(Kit.class, ItemStack.class, Kit::getKitMenuItemStack);
         KitGameSkriptExpressionRegister.register();
         KitGameSkriptEventRegister.register();
     }
