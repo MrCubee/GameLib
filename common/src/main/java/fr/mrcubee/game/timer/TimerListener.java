@@ -13,7 +13,7 @@ import fr.mrcubee.game.GameSettings;
  * @param <G> Plugin's game class.
  */
 @FunctionalInterface
-public interface TimerListener<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S>> {
+public interface TimerListener<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S, G>> {
 
     public void update(final G game);
 

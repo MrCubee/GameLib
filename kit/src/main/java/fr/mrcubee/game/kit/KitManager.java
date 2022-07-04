@@ -3,6 +3,9 @@ package fr.mrcubee.game.kit;
 import fr.mrcubee.game.Game;
 import fr.mrcubee.game.GameJavaPlugin;
 import fr.mrcubee.game.event.EventUtils;
+import fr.mrcubee.game.event.KitAddPlayerEvent;
+import fr.mrcubee.game.event.KitPlayerSelectEvent;
+import fr.mrcubee.game.event.KitRemovePlayerEvent;
 import org.bukkit.entity.Player;
 
 import java.util.HashSet;

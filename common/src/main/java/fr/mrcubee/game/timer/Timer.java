@@ -16,7 +16,7 @@ import java.util.Set;
  * @param <S> Plugin game's settings class.
  * @param <G> Plugin's game class.
  */
-public class Timer<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S>> extends BukkitRunnable {
+public class Timer<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S, G>> extends BukkitRunnable {
 
     private final G game;
     private final Set<TimerListener<P, S, G>> listeners;

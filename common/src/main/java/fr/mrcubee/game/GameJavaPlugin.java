@@ -1,8 +1,6 @@
 package fr.mrcubee.game;
 
-import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAddon;
-import fr.mrcubee.game.skript.Skriptable;
 import fr.mrcubee.langlib.Lang;
 import fr.mrcubee.game.skript.GameSkriptRegister;
 import org.bukkit.Bukkit;
@@ -59,4 +57,5 @@ public abstract class GameJavaPlugin<P extends GameJavaPlugin<P, S, G>, S extend
     public G getGame() {
         return this.game;
     }
+
 }
