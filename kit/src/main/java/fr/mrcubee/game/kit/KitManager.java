@@ -36,7 +36,7 @@ public class KitManager {
     }
 
     public void createKitUpdater() {
-        final Game<?, ?> game = plugin.getGame();
+        final Game<?, ?, ?> game = plugin.getGame();
 
         if (game == null)
             return;

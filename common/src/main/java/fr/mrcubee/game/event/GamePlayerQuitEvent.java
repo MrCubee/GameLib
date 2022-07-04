@@ -14,7 +14,7 @@ import org.bukkit.event.HandlerList;
  * @param <S> Plugin game's settings class.
  * @param <G> Plugin's game class.
  */
-public class GamePlayerQuitEvent<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S>> extends GamePlayerEvent<P, S, G> {
+public class GamePlayerQuitEvent<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S, G>> extends GamePlayerEvent<P, S, G> {
 
     private static final HandlerList HANDLERS = new HandlerList();
 

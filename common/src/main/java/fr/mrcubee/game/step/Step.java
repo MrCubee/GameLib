@@ -61,6 +61,10 @@ public abstract class Step<P extends GameJavaPlugin<P, S, G>, S extends GameSett
         return (this.duringTime - time) / 1000;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
     public G getGame() {
         return this.game;
     }

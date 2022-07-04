@@ -5,7 +5,7 @@ import fr.mrcubee.game.GameJavaPlugin;
 import fr.mrcubee.game.GameSettings;
 import fr.mrcubee.game.step.Step;
 
-public abstract class GameStepEvent<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S>> extends GameEvent<P, S, G> {
+public abstract class GameStepEvent<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S, G>> extends GameEvent<P, S, G> {
 
     private final Step<P, S, G> step;
 

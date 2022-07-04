@@ -3,7 +3,7 @@ package fr.mrcubee.game;
 import fr.mrcubee.game.kit.KitManager;
 import fr.mrcubee.game.skript.KitGameSkriptRegister;
 
-public class KitGame<P extends GameJavaPlugin<P, S, ? extends Game<P, S>>, S extends GameSettings> extends Game<P, S> {
+public class KitGame<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S, G>> extends Game<P, S, G> {
 
     private final KitManager kitManager;
 

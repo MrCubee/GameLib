@@ -42,6 +42,19 @@ public class StepManager<P extends GameJavaPlugin<P, S, G>, S extends GameSettin
         return this.steps.get(index);
     }
 
+    public Step<P, S, G> getStep(final String name) {
+        final int hashCode;
+
+        if (name == null)
+            return null;
+        hashCode = name.hashCode();
+        for (Step<P, S, G> step : this.steps) {
+            if (step.hashCode() == hashCode)
+                return step;
+        }
+        return null;
+    }
+
     public int getStepIndex(final Step<P, S, G> step) {
         if (step == null)
             return -1;

@@ -6,7 +6,7 @@ import fr.mrcubee.game.GameSettings;
 import fr.mrcubee.game.step.Step;
 import org.bukkit.event.HandlerList;
 
-public class GameStepDeleteEvent<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S>> extends GameStepEvent<P, S, G> {
+public class GameStepDeleteEvent<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S, G>> extends GameStepEvent<P, S, G> {
 
     private static final HandlerList HANDLERS = new HandlerList();
 

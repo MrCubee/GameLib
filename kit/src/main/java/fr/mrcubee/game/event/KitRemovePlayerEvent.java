@@ -17,7 +17,7 @@ import org.bukkit.inventory.ItemStack;
  * @param <S> Plugin game's settings class.
  * @param <G> Plugin's game class.
  */
-public class KitRemovePlayerEvent<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S>> extends KitPlayerEvent<P, S, G> implements Cancellable {
+public class KitRemovePlayerEvent<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S, G>> extends KitPlayerEvent<P, S, G> implements Cancellable {
 
     private static final HandlerList HANDLERS = new HandlerList();
     private boolean cancelled;

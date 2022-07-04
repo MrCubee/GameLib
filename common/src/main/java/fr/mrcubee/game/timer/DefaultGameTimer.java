@@ -13,7 +13,7 @@ import fr.mrcubee.game.GameStats;
  * @param <S> Plugin game's settings class.
  * @param <G> Plugin's game class.
  */
-public class DefaultGameTimer<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S>> implements TimerListener<P, S, G> {
+public class DefaultGameTimer<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S, G>> implements TimerListener<P, S, G> {
 
     private void waiting(final G game) {
         if (game.getNumberPlayer() >= game.getGameSettings().getMinPlayer())

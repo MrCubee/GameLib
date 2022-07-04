@@ -14,7 +14,7 @@ import org.bukkit.entity.Player;
  * @param <S> Plugin game's settings class.
  * @param <G> Plugin's game class.
  */
-public abstract class KitPlayerEvent<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S>> extends GamePlayerEvent<P, S, G> {
+public abstract class KitPlayerEvent<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S, G>> extends GamePlayerEvent<P, S, G> {
 
     private final Kit kit;
 

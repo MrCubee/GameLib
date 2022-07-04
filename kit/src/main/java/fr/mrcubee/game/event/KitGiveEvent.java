@@ -19,7 +19,7 @@ import java.util.Arrays;
  * @param <S> Plugin game's settings class.
  * @param <G> Plugin's game class.
  */
-public class KitGiveEvent<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S>> extends KitPlayerEvent<P, S, G> implements Cancellable {
+public class KitGiveEvent<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S, G>> extends KitPlayerEvent<P, S, G> implements Cancellable {
 
     private static final HandlerList HANDLERS = new HandlerList();
     private ItemStack[] items;

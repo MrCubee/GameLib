@@ -15,7 +15,7 @@ import org.bukkit.plugin.java.JavaPlugin;
  * @param <S> Plugin game's settings class.
  * @param <G> Plugin's game class.
  */
-public abstract class GameJavaPlugin<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S>> extends JavaPlugin {
+public abstract class GameJavaPlugin<P extends GameJavaPlugin<P, S, G>, S extends GameSettings, G extends Game<P, S, G>> extends JavaPlugin {
 
     private G game;
 

@@ -4,7 +4,7 @@ import ch.njol.skript.expressions.base.SimplePropertyExpression;
 import fr.mrcubee.game.Game;
 import fr.mrcubee.game.GameStats;
 
-public class SkGameStatExpression extends SimplePropertyExpression<Game<?, ?>, GameStats> {
+public class SkGameStatExpression extends SimplePropertyExpression<Game<?, ?, ?>, GameStats> {
 
     @Override
     public Class<? extends GameStats> getReturnType() {
@@ -17,7 +17,7 @@ public class SkGameStatExpression extends SimplePropertyExpression<Game<?, ?>, G
     }
 
     @Override
-    public GameStats convert(Game<?, ?> game) {
+    public GameStats convert(Game<?, ?, ?> game) {
         return game.getGameStats();
     }
 
